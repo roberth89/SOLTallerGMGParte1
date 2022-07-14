@@ -60,7 +60,6 @@ namespace IUFormularios
                 string mensajeCajero = "";
                 mensajeCajero = RetirarDinero();
 
-
                 DateTime fechaTransaccion = DateTime.Now;
                 Modelo.Persona objPersona = new Modelo.Persona
                 {
@@ -71,26 +70,20 @@ namespace IUFormularios
                     FechaTransaccion = fechaTransaccion,
                     MontoTransaccion = Convert.ToDecimal(TxtRetiro.Text),
                     Mensaje = mensajeCajero
-
                 };
 
                 _listaPersonas.Add(objPersona);
                 TxtListaPersonas.Text = "";
                 // 4 La lista de personas vamos a agregarlo al TxtListaPersonas
                 foreach (Modelo.Persona item in _listaPersonas)
-                {
-                    //TxtListaPersonas.Text = "";
-
+                {          
                     TxtListaPersonas.Text += item.Identificacion + SEPARADOR;
                     TxtListaPersonas.Text += item.FechaTransaccion + SEPARADOR;
                     TxtListaPersonas.Text += item.Nombre + " " + item.PrimerApellido + " " + item.SegundoApellido + SEPARADOR;
                     TxtListaPersonas.Text += item.MontoTransaccion + SEPARADOR;
                     TxtListaPersonas.Text += item.Mensaje + SEPARADOR;
-                    TxtListaPersonas.Text += "\r\n"; // Tarea investigar salto de linea.
+                    TxtListaPersonas.Text += "\r\n"; 
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -123,14 +116,9 @@ namespace IUFormularios
             {
                 mensaje = mensaje + "--" + objLista.ToString();
             }
-
             TxtList.Text = mensaje;
-
         }
 
-        private void TxtRetiro_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+  
     }
 }
