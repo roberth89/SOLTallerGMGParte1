@@ -77,13 +77,17 @@ namespace IUFormularios
 
         }
 
-        private void TxtConsulta_TextChanged(object sender, EventArgs e)
+        private void BtnList_Click(object sender, EventArgs e)
         {
+            List<string> resultadoList = LogicaNegocio.Lista.ListEjemlo();
+            string mensaje = string.Empty;
 
-        }
+            foreach (var objLista in resultadoList)
+            {
+                mensaje = mensaje + "--" + objLista.ToString();
+            }
 
-        private void TxtRetiro_TextChanged(object sender, EventArgs e)
-        {
+            TxtList.Text = mensaje;
 
         }
     }

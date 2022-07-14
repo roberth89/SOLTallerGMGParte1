@@ -35,6 +35,8 @@
             this.txtMensajeCajero = new System.Windows.Forms.TextBox();
             this.BtnArray = new System.Windows.Forms.Button();
             this.TxtListaArray = new System.Windows.Forms.TextBox();
+            this.BtnList = new System.Windows.Forms.Button();
+            this.TxtList = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BtnConsulta
@@ -63,7 +65,6 @@
             this.TxtConsulta.Name = "TxtConsulta";
             this.TxtConsulta.Size = new System.Drawing.Size(100, 23);
             this.TxtConsulta.TabIndex = 2;
-            this.TxtConsulta.TextChanged += new System.EventHandler(this.TxtConsulta_TextChanged);
             // 
             // TxtRetiro
             // 
@@ -71,7 +72,6 @@
             this.TxtRetiro.Name = "TxtRetiro";
             this.TxtRetiro.Size = new System.Drawing.Size(100, 23);
             this.TxtRetiro.TabIndex = 3;
-            this.TxtRetiro.TextChanged += new System.EventHandler(this.TxtRetiro_TextChanged);
             // 
             // txtMensajeCajero
             // 
@@ -98,11 +98,30 @@
             this.TxtListaArray.Size = new System.Drawing.Size(267, 23);
             this.TxtListaArray.TabIndex = 6;
             // 
+            // BtnList
+            // 
+            this.BtnList.Location = new System.Drawing.Point(12, 211);
+            this.BtnList.Name = "BtnList";
+            this.BtnList.Size = new System.Drawing.Size(75, 23);
+            this.BtnList.TabIndex = 7;
+            this.BtnList.Text = "List";
+            this.BtnList.UseVisualStyleBackColor = true;
+            this.BtnList.Click += new System.EventHandler(this.BtnList_Click);
+            // 
+            // TxtList
+            // 
+            this.TxtList.Location = new System.Drawing.Point(99, 212);
+            this.TxtList.Name = "TxtList";
+            this.TxtList.Size = new System.Drawing.Size(267, 23);
+            this.TxtList.TabIndex = 8;
+            // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 341);
+            this.Controls.Add(this.TxtList);
+            this.Controls.Add(this.BtnList);
             this.Controls.Add(this.TxtListaArray);
             this.Controls.Add(this.BtnArray);
             this.Controls.Add(this.txtMensajeCajero);
@@ -126,5 +145,7 @@
         private System.Windows.Forms.TextBox txtMensajeCajero;
         private System.Windows.Forms.Button BtnArray;
         private System.Windows.Forms.TextBox TxtListaArray;
+        private System.Windows.Forms.Button BtnList;
+        private System.Windows.Forms.TextBox TxtList;
     }
 }
