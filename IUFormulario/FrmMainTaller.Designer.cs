@@ -33,11 +33,13 @@
             this.TxtConsulta = new System.Windows.Forms.TextBox();
             this.TxtRetiro = new System.Windows.Forms.TextBox();
             this.txtMensajeCajero = new System.Windows.Forms.TextBox();
+            this.BtnArray = new System.Windows.Forms.Button();
+            this.TxtListaArray = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BtnConsulta
             // 
-            this.BtnConsulta.Location = new System.Drawing.Point(52, 50);
+            this.BtnConsulta.Location = new System.Drawing.Point(12, 12);
             this.BtnConsulta.Name = "BtnConsulta";
             this.BtnConsulta.Size = new System.Drawing.Size(75, 23);
             this.BtnConsulta.TabIndex = 0;
@@ -47,7 +49,7 @@
             // 
             // BtnRetiro
             // 
-            this.BtnRetiro.Location = new System.Drawing.Point(53, 93);
+            this.BtnRetiro.Location = new System.Drawing.Point(12, 55);
             this.BtnRetiro.Name = "BtnRetiro";
             this.BtnRetiro.Size = new System.Drawing.Size(75, 23);
             this.BtnRetiro.TabIndex = 1;
@@ -57,31 +59,52 @@
             // 
             // TxtConsulta
             // 
-            this.TxtConsulta.Location = new System.Drawing.Point(165, 51);
+            this.TxtConsulta.Location = new System.Drawing.Point(109, 12);
             this.TxtConsulta.Name = "TxtConsulta";
             this.TxtConsulta.Size = new System.Drawing.Size(100, 23);
             this.TxtConsulta.TabIndex = 2;
+            this.TxtConsulta.TextChanged += new System.EventHandler(this.TxtConsulta_TextChanged);
             // 
             // TxtRetiro
             // 
-            this.TxtRetiro.Location = new System.Drawing.Point(165, 96);
+            this.TxtRetiro.Location = new System.Drawing.Point(109, 55);
             this.TxtRetiro.Name = "TxtRetiro";
             this.TxtRetiro.Size = new System.Drawing.Size(100, 23);
             this.TxtRetiro.TabIndex = 3;
+            this.TxtRetiro.TextChanged += new System.EventHandler(this.TxtRetiro_TextChanged);
             // 
             // txtMensajeCajero
             // 
-            this.txtMensajeCajero.Location = new System.Drawing.Point(52, 143);
+            this.txtMensajeCajero.Location = new System.Drawing.Point(12, 105);
             this.txtMensajeCajero.Multiline = true;
             this.txtMensajeCajero.Name = "txtMensajeCajero";
             this.txtMensajeCajero.Size = new System.Drawing.Size(354, 48);
             this.txtMensajeCajero.TabIndex = 4;
+            // 
+            // BtnArray
+            // 
+            this.BtnArray.Location = new System.Drawing.Point(12, 170);
+            this.BtnArray.Name = "BtnArray";
+            this.BtnArray.Size = new System.Drawing.Size(75, 23);
+            this.BtnArray.TabIndex = 5;
+            this.BtnArray.Text = "Lista Array";
+            this.BtnArray.UseVisualStyleBackColor = true;
+            this.BtnArray.Click += new System.EventHandler(this.BtnArray_Click);
+            // 
+            // TxtListaArray
+            // 
+            this.TxtListaArray.Location = new System.Drawing.Point(99, 170);
+            this.TxtListaArray.Name = "TxtListaArray";
+            this.TxtListaArray.Size = new System.Drawing.Size(267, 23);
+            this.TxtListaArray.TabIndex = 6;
             // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 341);
+            this.Controls.Add(this.TxtListaArray);
+            this.Controls.Add(this.BtnArray);
             this.Controls.Add(this.txtMensajeCajero);
             this.Controls.Add(this.TxtRetiro);
             this.Controls.Add(this.TxtConsulta);
@@ -101,5 +124,7 @@
         private System.Windows.Forms.TextBox TxtConsulta;
         private System.Windows.Forms.TextBox TxtRetiro;
         private System.Windows.Forms.TextBox txtMensajeCajero;
+        private System.Windows.Forms.Button BtnArray;
+        private System.Windows.Forms.TextBox TxtListaArray;
     }
 }

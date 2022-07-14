@@ -39,7 +39,7 @@ namespace IUFormularios
             TxtConsulta.Text = valorRetorno.ToString();
             txtMensajeCajero.Text = mensajeRetorno;
         }
-            
+
 
         private void BtnRetiro_Click(object sender, EventArgs e)
         {
@@ -54,11 +54,37 @@ namespace IUFormularios
                     txtMensajeCajero.Text = ex.Message;
                 }
                 RetirarDinero();
-            }            
+            }
             catch (Exception ex)
             {
                 txtMensajeCajero.Text = ex.Message;
             }
+        }
+
+        private void BtnArray_Click(object sender, EventArgs e)
+        {
+            string[] resultadoLista;
+            string mensaje = string.Empty;
+            resultadoLista = LogicaNegocio.Lista.ListaArray();
+
+            for (int i = 0; i < resultadoLista.Length; i++)
+            {
+                mensaje = mensaje + "--" + resultadoLista[i];
+                // mensaje += resultadoLista[i];
+            }
+
+            TxtListaArray.Text = mensaje;
+
+        }
+
+        private void TxtConsulta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtRetiro_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
