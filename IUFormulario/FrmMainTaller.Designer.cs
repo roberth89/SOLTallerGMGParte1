@@ -93,6 +93,7 @@
             this.TxtRetiro.Name = "TxtRetiro";
             this.TxtRetiro.Size = new System.Drawing.Size(100, 23);
             this.TxtRetiro.TabIndex = 3;
+            this.TxtRetiro.TextChanged += new System.EventHandler(this.TxtRetiro_TextChanged);
             // 
             // txtMensajeCajero
             // 

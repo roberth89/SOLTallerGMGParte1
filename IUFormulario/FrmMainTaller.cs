@@ -30,7 +30,7 @@ namespace IUFormularios
             decimal error = 8 / cero;
         }
 
-        private void RetirarDinero()
+        private string RetirarDinero()
         {
             string montoRetiro = TxtRetiro.Text;
             string mensajeRetorno = string.Empty;
@@ -38,6 +38,7 @@ namespace IUFormularios
             valorRetorno = _objCajero.RetirarDinero(Convert.ToDecimal(montoRetiro), ref mensajeRetorno);
             TxtConsulta.Text = valorRetorno.ToString();
             txtMensajeCajero.Text = mensajeRetorno;
+            return mensajeRetorno;
         }
 
 
@@ -53,7 +54,32 @@ namespace IUFormularios
                 {
                     txtMensajeCajero.Text = ex.Message;
                 }
-                RetirarDinero();
+                string mensajeCajero = "";
+                mensajeCajero = RetirarDinero();
+
+                // 1 Recuperar Fecha.
+                DateTime fechaTransaccion = DateTime.Now;
+                // 2 Crear objeto Persona.
+                //Modelo.Persona objPersona = new Modelo.Persona();
+                //objPersona.Identificacion = TxtIdentificacion.Text;
+                Modelo.Persona objPersona = new Modelo.Persona
+                {
+                    Identificacion = TxtIdentificacion.Text,
+                    Nombre = TxtNombre.Text,
+                    PrimerApellido = TxtApellido1.Text,
+                    SegundoApellido = TxtApellido2.Text,
+                    FechaTransaccion = fechaTransaccion,
+                    MontoTransaccion = Convert.ToDecimal(TxtRetiro.Text),
+                    Mensaje = mensajeCajero
+
+                };
+                // 3 Agregar el objeto Persona a una lista personas.
+
+
+                // 4 La lista de personas vamos a agregarlo al TxtListaPersonas
+
+
+
             }
             catch (Exception ex)
             {
@@ -88,6 +114,11 @@ namespace IUFormularios
             }
 
             TxtList.Text = mensaje;
+
+        }
+
+        private void TxtRetiro_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
