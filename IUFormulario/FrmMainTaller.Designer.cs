@@ -152,7 +152,7 @@
             this.GrbPractica.Controls.Add(this.LblIdentificacion);
             this.GrbPractica.Location = new System.Drawing.Point(12, 254);
             this.GrbPractica.Name = "GrbPractica";
-            this.GrbPractica.Size = new System.Drawing.Size(576, 333);
+            this.GrbPractica.Size = new System.Drawing.Size(739, 333);
             this.GrbPractica.TabIndex = 9;
             this.GrbPractica.TabStop = false;
             this.GrbPractica.Text = "Practica 3";
@@ -162,7 +162,7 @@
             this.TxtListaPersonas.Location = new System.Drawing.Point(6, 146);
             this.TxtListaPersonas.Multiline = true;
             this.TxtListaPersonas.Name = "TxtListaPersonas";
-            this.TxtListaPersonas.Size = new System.Drawing.Size(564, 149);
+            this.TxtListaPersonas.Size = new System.Drawing.Size(727, 149);
             this.TxtListaPersonas.TabIndex = 8;
             // 
             // TxtApellido2
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 624);
+            this.ClientSize = new System.Drawing.Size(763, 624);
             this.Controls.Add(this.GrbPractica);
             this.Controls.Add(this.TxtList);
             this.Controls.Add(this.BtnList);

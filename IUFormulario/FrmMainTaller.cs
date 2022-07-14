@@ -86,7 +86,7 @@ namespace IUFormularios
                     TxtListaPersonas.Text += item.Nombre + " " + item.PrimerApellido + " " + item.SegundoApellido + SEPARADOR;
                     TxtListaPersonas.Text += item.MontoTransaccion + SEPARADOR;
                     TxtListaPersonas.Text += item.Mensaje + SEPARADOR;
-                    TxtListaPersonas.Text += "\n"; // Tarea investigar salto de linea.
+                    TxtListaPersonas.Text += "\r\n"; // Tarea investigar salto de linea.
                 }
 
 
