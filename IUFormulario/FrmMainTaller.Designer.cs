@@ -39,16 +39,26 @@
             this.BtnList = new System.Windows.Forms.Button();
             this.TxtList = new System.Windows.Forms.TextBox();
             this.GrbPractica = new System.Windows.Forms.GroupBox();
-            this.LblIdentificacion = new System.Windows.Forms.Label();
-            this.LblNombre = new System.Windows.Forms.Label();
-            this.LblApellido1 = new System.Windows.Forms.Label();
-            this.TxtIdentificacion = new System.Windows.Forms.TextBox();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtApellido1 = new System.Windows.Forms.TextBox();
             this.TxtApellido2 = new System.Windows.Forms.TextBox();
+            this.TxtApellido1 = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtIdentificacion = new System.Windows.Forms.TextBox();
+            this.LblApellido1 = new System.Windows.Forms.Label();
+            this.LblNombre = new System.Windows.Forms.Label();
+            this.LblIdentificacion = new System.Windows.Forms.Label();
+            this.TxtListaPersonas = new System.Windows.Forms.TextBox();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // LblApellido2
+            // 
+            LblApellido2.AutoSize = true;
+            LblApellido2.Location = new System.Drawing.Point(31, 117);
+            LblApellido2.Name = "LblApellido2";
+            LblApellido2.Size = new System.Drawing.Size(60, 15);
+            LblApellido2.TabIndex = 3;
+            LblApellido2.Text = "Apellido 2";
             // 
             // BtnConsulta
             // 
@@ -62,7 +72,7 @@
             // 
             // BtnRetiro
             // 
-            this.BtnRetiro.Location = new System.Drawing.Point(12, 55);
+            this.BtnRetiro.Location = new System.Drawing.Point(241, 28);
             this.BtnRetiro.Name = "BtnRetiro";
             this.BtnRetiro.Size = new System.Drawing.Size(75, 23);
             this.BtnRetiro.TabIndex = 1;
@@ -79,7 +89,7 @@
             // 
             // TxtRetiro
             // 
-            this.TxtRetiro.Location = new System.Drawing.Point(109, 55);
+            this.TxtRetiro.Location = new System.Drawing.Point(338, 28);
             this.TxtRetiro.Name = "TxtRetiro";
             this.TxtRetiro.Size = new System.Drawing.Size(100, 23);
             this.TxtRetiro.TabIndex = 3;
@@ -128,38 +138,51 @@
             // 
             // GrbPractica
             // 
+            this.GrbPractica.Controls.Add(this.TxtListaPersonas);
             this.GrbPractica.Controls.Add(this.TxtApellido2);
             this.GrbPractica.Controls.Add(this.TxtApellido1);
             this.GrbPractica.Controls.Add(this.TxtNombre);
             this.GrbPractica.Controls.Add(this.TxtIdentificacion);
             this.GrbPractica.Controls.Add(LblApellido2);
+            this.GrbPractica.Controls.Add(this.TxtRetiro);
             this.GrbPractica.Controls.Add(this.LblApellido1);
             this.GrbPractica.Controls.Add(this.LblNombre);
+            this.GrbPractica.Controls.Add(this.BtnRetiro);
             this.GrbPractica.Controls.Add(this.LblIdentificacion);
-            this.GrbPractica.Location = new System.Drawing.Point(12, 251);
+            this.GrbPractica.Location = new System.Drawing.Point(12, 254);
             this.GrbPractica.Name = "GrbPractica";
-            this.GrbPractica.Size = new System.Drawing.Size(524, 193);
+            this.GrbPractica.Size = new System.Drawing.Size(576, 269);
             this.GrbPractica.TabIndex = 9;
             this.GrbPractica.TabStop = false;
             this.GrbPractica.Text = "Practica 3";
             // 
-            // LblIdentificacion
+            // TxtApellido2
             // 
-            this.LblIdentificacion.AutoSize = true;
-            this.LblIdentificacion.Location = new System.Drawing.Point(6, 30);
-            this.LblIdentificacion.Name = "LblIdentificacion";
-            this.LblIdentificacion.Size = new System.Drawing.Size(85, 15);
-            this.LblIdentificacion.TabIndex = 0;
-            this.LblIdentificacion.Text = "Identificacion: ";
+            this.TxtApellido2.Location = new System.Drawing.Point(115, 117);
+            this.TxtApellido2.Name = "TxtApellido2";
+            this.TxtApellido2.Size = new System.Drawing.Size(100, 23);
+            this.TxtApellido2.TabIndex = 7;
             // 
-            // LblNombre
+            // TxtApellido1
             // 
-            this.LblNombre.AutoSize = true;
-            this.LblNombre.Location = new System.Drawing.Point(37, 59);
-            this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(54, 15);
-            this.LblNombre.TabIndex = 1;
-            this.LblNombre.Text = "Nombre:";
+            this.TxtApellido1.Location = new System.Drawing.Point(115, 88);
+            this.TxtApellido1.Name = "TxtApellido1";
+            this.TxtApellido1.Size = new System.Drawing.Size(100, 23);
+            this.TxtApellido1.TabIndex = 6;
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(115, 59);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(100, 23);
+            this.TxtNombre.TabIndex = 5;
+            // 
+            // TxtIdentificacion
+            // 
+            this.TxtIdentificacion.Location = new System.Drawing.Point(115, 28);
+            this.TxtIdentificacion.Name = "TxtIdentificacion";
+            this.TxtIdentificacion.Size = new System.Drawing.Size(100, 23);
+            this.TxtIdentificacion.TabIndex = 4;
             // 
             // LblApellido1
             // 
@@ -170,57 +193,44 @@
             this.LblApellido1.TabIndex = 2;
             this.LblApellido1.Text = "Apellido 1:";
             // 
-            // LblApellido2
+            // LblNombre
             // 
-            LblApellido2.AutoSize = true;
-            LblApellido2.Location = new System.Drawing.Point(31, 117);
-            LblApellido2.Name = "LblApellido2";
-            LblApellido2.Size = new System.Drawing.Size(60, 15);
-            LblApellido2.TabIndex = 3;
-            LblApellido2.Text = "Apellido 2";
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.Location = new System.Drawing.Point(37, 59);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(54, 15);
+            this.LblNombre.TabIndex = 1;
+            this.LblNombre.Text = "Nombre:";
             // 
-            // TxtIdentificacion
+            // LblIdentificacion
             // 
-            this.TxtIdentificacion.Location = new System.Drawing.Point(115, 28);
-            this.TxtIdentificacion.Name = "TxtIdentificacion";
-            this.TxtIdentificacion.Size = new System.Drawing.Size(100, 23);
-            this.TxtIdentificacion.TabIndex = 4;
+            this.LblIdentificacion.AutoSize = true;
+            this.LblIdentificacion.Location = new System.Drawing.Point(6, 30);
+            this.LblIdentificacion.Name = "LblIdentificacion";
+            this.LblIdentificacion.Size = new System.Drawing.Size(85, 15);
+            this.LblIdentificacion.TabIndex = 0;
+            this.LblIdentificacion.Text = "Identificacion: ";
             // 
-            // TxtNombre
+            // TxtListaPersonas
             // 
-            this.TxtNombre.Location = new System.Drawing.Point(115, 59);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(100, 23);
-            this.TxtNombre.TabIndex = 5;
-            // 
-            // TxtApellido1
-            // 
-            this.TxtApellido1.Location = new System.Drawing.Point(115, 88);
-            this.TxtApellido1.Name = "TxtApellido1";
-            this.TxtApellido1.Size = new System.Drawing.Size(100, 23);
-            this.TxtApellido1.TabIndex = 6;
-            // 
-            // TxtApellido2
-            // 
-            this.TxtApellido2.Location = new System.Drawing.Point(115, 117);
-            this.TxtApellido2.Name = "TxtApellido2";
-            this.TxtApellido2.Size = new System.Drawing.Size(100, 23);
-            this.TxtApellido2.TabIndex = 7;
+            this.TxtListaPersonas.Location = new System.Drawing.Point(6, 146);
+            this.TxtListaPersonas.Multiline = true;
+            this.TxtListaPersonas.Name = "TxtListaPersonas";
+            this.TxtListaPersonas.Size = new System.Drawing.Size(564, 87);
+            this.TxtListaPersonas.TabIndex = 8;
             // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 456);
+            this.ClientSize = new System.Drawing.Size(600, 567);
             this.Controls.Add(this.GrbPractica);
             this.Controls.Add(this.TxtList);
             this.Controls.Add(this.BtnList);
             this.Controls.Add(this.TxtListaArray);
             this.Controls.Add(this.BtnArray);
             this.Controls.Add(this.txtMensajeCajero);
-            this.Controls.Add(this.TxtRetiro);
             this.Controls.Add(this.TxtConsulta);
-            this.Controls.Add(this.BtnRetiro);
             this.Controls.Add(this.BtnConsulta);
             this.Name = "FrmMainTaller";
             this.Text = "Taller";
@@ -250,5 +260,6 @@
         private System.Windows.Forms.Label LblApellido1;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblIdentificacion;
+        private System.Windows.Forms.TextBox TxtListaPersonas;
     }
 }
