@@ -12,6 +12,9 @@ namespace IUFormularios
     {
 
         LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero();
+        List<Modelo.Persona> _listaPersonas = new List<Modelo.Persona>();
+
+        private const string SEPARADOR = "---";
 
         public FrmMainTaller()
         {
@@ -57,11 +60,8 @@ namespace IUFormularios
                 string mensajeCajero = "";
                 mensajeCajero = RetirarDinero();
 
-                // 1 Recuperar Fecha.
+
                 DateTime fechaTransaccion = DateTime.Now;
-                // 2 Crear objeto Persona.
-                //Modelo.Persona objPersona = new Modelo.Persona();
-                //objPersona.Identificacion = TxtIdentificacion.Text;
                 Modelo.Persona objPersona = new Modelo.Persona
                 {
                     Identificacion = TxtIdentificacion.Text,
@@ -73,10 +73,21 @@ namespace IUFormularios
                     Mensaje = mensajeCajero
 
                 };
-                // 3 Agregar el objeto Persona a una lista personas.
 
-
+                _listaPersonas.Add(objPersona);
+                TxtListaPersonas.Text = "";
                 // 4 La lista de personas vamos a agregarlo al TxtListaPersonas
+                foreach (Modelo.Persona item in _listaPersonas)
+                {
+                    //TxtListaPersonas.Text = "";
+
+                    TxtListaPersonas.Text += item.Identificacion + SEPARADOR;
+                    TxtListaPersonas.Text += item.FechaTransaccion + SEPARADOR;
+                    TxtListaPersonas.Text += item.Nombre + " " + item.PrimerApellido + " " + item.SegundoApellido + SEPARADOR;
+                    TxtListaPersonas.Text += item.MontoTransaccion + SEPARADOR;
+                    TxtListaPersonas.Text += item.Mensaje + SEPARADOR;
+                    TxtListaPersonas.Text += "\n"; // Tarea investigar salto de linea.
+                }
 
 
 

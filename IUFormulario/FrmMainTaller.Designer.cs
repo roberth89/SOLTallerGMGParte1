@@ -39,6 +39,7 @@
             this.BtnList = new System.Windows.Forms.Button();
             this.TxtList = new System.Windows.Forms.TextBox();
             this.GrbPractica = new System.Windows.Forms.GroupBox();
+            this.TxtListaPersonas = new System.Windows.Forms.TextBox();
             this.TxtApellido2 = new System.Windows.Forms.TextBox();
             this.TxtApellido1 = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.LblApellido1 = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblIdentificacion = new System.Windows.Forms.Label();
-            this.TxtListaPersonas = new System.Windows.Forms.TextBox();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
             this.SuspendLayout();
@@ -152,10 +152,18 @@
             this.GrbPractica.Controls.Add(this.LblIdentificacion);
             this.GrbPractica.Location = new System.Drawing.Point(12, 254);
             this.GrbPractica.Name = "GrbPractica";
-            this.GrbPractica.Size = new System.Drawing.Size(576, 269);
+            this.GrbPractica.Size = new System.Drawing.Size(576, 333);
             this.GrbPractica.TabIndex = 9;
             this.GrbPractica.TabStop = false;
             this.GrbPractica.Text = "Practica 3";
+            // 
+            // TxtListaPersonas
+            // 
+            this.TxtListaPersonas.Location = new System.Drawing.Point(6, 146);
+            this.TxtListaPersonas.Multiline = true;
+            this.TxtListaPersonas.Name = "TxtListaPersonas";
+            this.TxtListaPersonas.Size = new System.Drawing.Size(564, 149);
+            this.TxtListaPersonas.TabIndex = 8;
             // 
             // TxtApellido2
             // 
@@ -212,19 +220,11 @@
             this.LblIdentificacion.TabIndex = 0;
             this.LblIdentificacion.Text = "Identificacion: ";
             // 
-            // TxtListaPersonas
-            // 
-            this.TxtListaPersonas.Location = new System.Drawing.Point(6, 146);
-            this.TxtListaPersonas.Multiline = true;
-            this.TxtListaPersonas.Name = "TxtListaPersonas";
-            this.TxtListaPersonas.Size = new System.Drawing.Size(564, 87);
-            this.TxtListaPersonas.TabIndex = 8;
-            // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 567);
+            this.ClientSize = new System.Drawing.Size(600, 624);
             this.Controls.Add(this.GrbPractica);
             this.Controls.Add(this.TxtList);
             this.Controls.Add(this.BtnList);
