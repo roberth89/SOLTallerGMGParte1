@@ -55,6 +55,8 @@
             this.btnPila = new System.Windows.Forms.Button();
             this.BtnDiccionario = new System.Windows.Forms.Button();
             this.GrbPractica5 = new System.Windows.Forms.GroupBox();
+            this.BtnLambdaPares = new System.Windows.Forms.Button();
+            this.BtnLambdaMayorNumeros = new System.Windows.Forms.Button();
             this.btnLambdaSuma = new System.Windows.Forms.Button();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
@@ -304,6 +306,8 @@
             // 
             // GrbPractica5
             // 
+            this.GrbPractica5.Controls.Add(this.BtnLambdaPares);
+            this.GrbPractica5.Controls.Add(this.BtnLambdaMayorNumeros);
             this.GrbPractica5.Controls.Add(this.btnLambdaSuma);
             this.GrbPractica5.Location = new System.Drawing.Point(18, 571);
             this.GrbPractica5.Name = "GrbPractica5";
@@ -311,6 +315,26 @@
             this.GrbPractica5.TabIndex = 14;
             this.GrbPractica5.TabStop = false;
             this.GrbPractica5.Text = "Practica #5";
+            // 
+            // BtnLambdaPares
+            // 
+            this.BtnLambdaPares.Location = new System.Drawing.Point(306, 37);
+            this.BtnLambdaPares.Name = "BtnLambdaPares";
+            this.BtnLambdaPares.Size = new System.Drawing.Size(113, 23);
+            this.BtnLambdaPares.TabIndex = 2;
+            this.BtnLambdaPares.Text = "Lambda Pares";
+            this.BtnLambdaPares.UseVisualStyleBackColor = true;
+            this.BtnLambdaPares.Click += new System.EventHandler(this.BtnLambdaPares_Click);
+            // 
+            // BtnLambdaMayorNumeros
+            // 
+            this.BtnLambdaMayorNumeros.Location = new System.Drawing.Point(134, 37);
+            this.BtnLambdaMayorNumeros.Name = "BtnLambdaMayorNumeros";
+            this.BtnLambdaMayorNumeros.Size = new System.Drawing.Size(155, 23);
+            this.BtnLambdaMayorNumeros.TabIndex = 1;
+            this.BtnLambdaMayorNumeros.Text = "LambdaMayorNumeros";
+            this.BtnLambdaMayorNumeros.UseVisualStyleBackColor = true;
+            this.BtnLambdaMayorNumeros.Click += new System.EventHandler(this.BtnLambdaMayorNumeros_Click);
             // 
             // btnLambdaSuma
             // 
@@ -380,5 +404,7 @@
         private System.Windows.Forms.Button BtnDiccionario;
         private System.Windows.Forms.GroupBox GrbPractica5;
         private System.Windows.Forms.Button btnLambdaSuma;
+        private System.Windows.Forms.Button BtnLambdaMayorNumeros;
+        private System.Windows.Forms.Button BtnLambdaPares;
     }
 }

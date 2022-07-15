@@ -229,5 +229,19 @@ namespace IUFormularios
             // Tarea permitir que LambdaSuma reciba 2 parametros para realizar la operacion
             int resultado = objLambda.LambdaSuma();
         }
+
+        private void BtnLambdaMayorNumeros_Click(object sender, EventArgs e)
+        {
+            var objLambda = new LogicaNegocio.Lambda();
+            //   Tarea permitir que LambdaSuma reciba 2 parametros
+            int resultado = objLambda.LambdaMayorNumeros();
+        }
+
+        private void BtnLambdaPares_Click(object sender, EventArgs e)
+        {
+            var objLambda = new LogicaNegocio.Lambda();
+           
+            IEnumerable<int> resultado = objLambda.ObtenerPares();
+        }
     }
 }

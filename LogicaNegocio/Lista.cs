@@ -48,7 +48,7 @@ namespace LogicaNegocio
         public static Queue<int> Cola()
         {
             Queue<int> numerosCola = new Queue<int>();
-            int[] array = new int[6] { 10, 7, 6, 4, 2, 0 };
+            int[] array = new int[6] { 10, 7, 6, 3, 2, 1 };
 
             foreach (int itemNumero in array)
             {
