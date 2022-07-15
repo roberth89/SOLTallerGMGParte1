@@ -76,13 +76,13 @@ namespace IUFormularios
                 TxtListaPersonas.Text = "";
                 // 4 La lista de personas vamos a agregarlo al TxtListaPersonas
                 foreach (Modelo.Persona item in _listaPersonas)
-                {          
+                {
                     TxtListaPersonas.Text += item.Identificacion + SEPARADOR;
                     TxtListaPersonas.Text += item.FechaTransaccion + SEPARADOR;
                     TxtListaPersonas.Text += item.Nombre + " " + item.PrimerApellido + " " + item.SegundoApellido + SEPARADOR;
                     TxtListaPersonas.Text += item.MontoTransaccion + SEPARADOR;
                     TxtListaPersonas.Text += item.Mensaje + SEPARADOR;
-                    TxtListaPersonas.Text += "\r\n"; 
+                    TxtListaPersonas.Text += "\r\n";
                 }
             }
             catch (Exception ex)
@@ -153,11 +153,18 @@ namespace IUFormularios
             objAlmacenaObjetoNormal.Agregar("Fernando");
             objAlmacenaObjetoNormal.Agregar("Ray");
             objAlmacenaObjetoNormal.Agregar("Nestor"); // 3
-
-            //int nombrePersona = (int)objAlmacenaObjetoNormal.GetElemento(1);
+                                                       // int nombrePersona = (int)objAlmacenaObjetoNormal.GetElemento(1);
             string nombrePersona = (string)objAlmacenaObjetoNormal.GetElemento(1);
-
             MessageBox.Show(nombrePersona);
+
+            LogicaNegocio.AlmacenaObjetoNormal objAlmacenaObjetoNormalPersonas = new LogicaNegocio.AlmacenaObjetoNormal(4);
+            objAlmacenaObjetoNormalPersonas.Agregar(new Modelo.Persona { Identificacion = "01", Nombre = "Roberto" });
+            objAlmacenaObjetoNormalPersonas.Agregar(new Modelo.Persona { Identificacion = "02", Nombre = "Fernando" });
+            objAlmacenaObjetoNormalPersonas.Agregar(new Modelo.Persona { Identificacion = "03", Nombre = "Ray" });
+            objAlmacenaObjetoNormalPersonas.Agregar(new Modelo.Persona { Identificacion = "04", Nombre = "Nestor" });
+
+            Modelo.Persona objPersona = (Modelo.Persona)objAlmacenaObjetoNormalPersonas.GetElemento(1);
+            MessageBox.Show(objPersona.Nombre + " " + objPersona.Identificacion);
 
         }
 
