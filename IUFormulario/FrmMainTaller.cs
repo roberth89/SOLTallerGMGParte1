@@ -208,5 +208,10 @@ namespace IUFormularios
             // Tarea , agregar en un control tipo TextBox, para poder tener una represetacion grafica.
 
         }
+
+        private void btnPila_Click(object sender, EventArgs e)
+        {
+            Stack<int> objPila = LogicaNegocio.Lista.Pila();   
+        }
     }
 }

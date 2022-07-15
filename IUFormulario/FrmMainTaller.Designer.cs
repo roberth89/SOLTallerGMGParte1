@@ -52,6 +52,7 @@
             this.LblIdentificacion = new System.Windows.Forms.Label();
             this.BtnLinkedList = new System.Windows.Forms.Button();
             this.BtnCola = new System.Windows.Forms.Button();
+            this.btnPila = new System.Windows.Forms.Button();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
             this.GrbPractica4.SuspendLayout();
@@ -169,14 +170,14 @@
             this.GrbPractica4.Controls.Add(this.BtnEjemploObjeto);
             this.GrbPractica4.Location = new System.Drawing.Point(457, 22);
             this.GrbPractica4.Name = "GrbPractica4";
-            this.GrbPractica4.Size = new System.Drawing.Size(244, 98);
+            this.GrbPractica4.Size = new System.Drawing.Size(276, 98);
             this.GrbPractica4.TabIndex = 9;
             this.GrbPractica4.TabStop = false;
             this.GrbPractica4.Text = "Practica #4";
             // 
             // BtnGenerico
             // 
-            this.BtnGenerico.Location = new System.Drawing.Point(24, 62);
+            this.BtnGenerico.Location = new System.Drawing.Point(6, 63);
             this.BtnGenerico.Name = "BtnGenerico";
             this.BtnGenerico.Size = new System.Drawing.Size(120, 23);
             this.BtnGenerico.TabIndex = 1;
@@ -186,7 +187,7 @@
             // 
             // BtnEjemploObjeto
             // 
-            this.BtnEjemploObjeto.Location = new System.Drawing.Point(24, 28);
+            this.BtnEjemploObjeto.Location = new System.Drawing.Point(6, 29);
             this.BtnEjemploObjeto.Name = "BtnEjemploObjeto";
             this.BtnEjemploObjeto.Size = new System.Drawing.Size(120, 23);
             this.BtnEjemploObjeto.TabIndex = 0;
@@ -277,11 +278,22 @@
             this.BtnCola.UseVisualStyleBackColor = true;
             this.BtnCola.Click += new System.EventHandler(this.BtnCola_Click);
             // 
+            // btnPila
+            // 
+            this.btnPila.Location = new System.Drawing.Point(520, 175);
+            this.btnPila.Name = "btnPila";
+            this.btnPila.Size = new System.Drawing.Size(116, 23);
+            this.btnPila.TabIndex = 12;
+            this.btnPila.Text = "Pila";
+            this.btnPila.UseVisualStyleBackColor = true;
+            this.btnPila.Click += new System.EventHandler(this.btnPila_Click);
+            // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 624);
+            this.Controls.Add(this.btnPila);
             this.Controls.Add(this.BtnCola);
             this.Controls.Add(this.BtnLinkedList);
             this.Controls.Add(this.GrbPractica);
@@ -327,5 +339,6 @@
         private System.Windows.Forms.Button BtnEjemploObjeto;
         private System.Windows.Forms.Button BtnLinkedList;
         private System.Windows.Forms.Button BtnCola;
+        private System.Windows.Forms.Button btnPila;
     }
 }

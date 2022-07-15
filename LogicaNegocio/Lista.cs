@@ -61,5 +61,21 @@ namespace LogicaNegocio
 
         }
 
+        public static Stack<int> Pila()
+        {
+            Stack<int> numerosPila = new Stack<int>();
+            int[] array = new int[6] { 10, 7, 6, 4, 2, 0 };
+
+            foreach (var item in array)
+            {
+                numerosPila.Push(item);
+            }
+
+            numerosPila.Pop();
+
+            return numerosPila;
+
+        }
+
     }
 }
