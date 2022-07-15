@@ -47,8 +47,12 @@
             this.LblApellido1 = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblIdentificacion = new System.Windows.Forms.Label();
+            this.GrbPractica4 = new System.Windows.Forms.GroupBox();
+            this.BtnEjemploObjeto = new System.Windows.Forms.Button();
+            this.BtnGenerico = new System.Windows.Forms.Button();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
+            this.GrbPractica4.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblApellido2
@@ -92,7 +96,7 @@
             this.TxtRetiro.Location = new System.Drawing.Point(338, 28);
             this.TxtRetiro.Name = "TxtRetiro";
             this.TxtRetiro.Size = new System.Drawing.Size(100, 23);
-            this.TxtRetiro.TabIndex = 3;           
+            this.TxtRetiro.TabIndex = 3;
             // 
             // txtMensajeCajero
             // 
@@ -138,6 +142,7 @@
             // 
             // GrbPractica
             // 
+            this.GrbPractica.Controls.Add(this.GrbPractica4);
             this.GrbPractica.Controls.Add(this.TxtListaPersonas);
             this.GrbPractica.Controls.Add(this.TxtApellido2);
             this.GrbPractica.Controls.Add(this.TxtApellido1);
@@ -219,6 +224,35 @@
             this.LblIdentificacion.TabIndex = 0;
             this.LblIdentificacion.Text = "Identificacion: ";
             // 
+            // GrbPractica4
+            // 
+            this.GrbPractica4.Controls.Add(this.BtnGenerico);
+            this.GrbPractica4.Controls.Add(this.BtnEjemploObjeto);
+            this.GrbPractica4.Location = new System.Drawing.Point(457, 22);
+            this.GrbPractica4.Name = "GrbPractica4";
+            this.GrbPractica4.Size = new System.Drawing.Size(244, 98);
+            this.GrbPractica4.TabIndex = 9;
+            this.GrbPractica4.TabStop = false;
+            this.GrbPractica4.Text = "Practica #4";
+            // 
+            // BtnEjemploObjeto
+            // 
+            this.BtnEjemploObjeto.Location = new System.Drawing.Point(24, 28);
+            this.BtnEjemploObjeto.Name = "BtnEjemploObjeto";
+            this.BtnEjemploObjeto.Size = new System.Drawing.Size(120, 23);
+            this.BtnEjemploObjeto.TabIndex = 0;
+            this.BtnEjemploObjeto.Text = "Ejemplo Object";
+            this.BtnEjemploObjeto.UseVisualStyleBackColor = true;
+            // 
+            // BtnGenerico
+            // 
+            this.BtnGenerico.Location = new System.Drawing.Point(24, 62);
+            this.BtnGenerico.Name = "BtnGenerico";
+            this.BtnGenerico.Size = new System.Drawing.Size(120, 23);
+            this.BtnGenerico.TabIndex = 1;
+            this.BtnGenerico.Text = "Ejemplo Generic";
+            this.BtnGenerico.UseVisualStyleBackColor = true;
+            // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -236,6 +270,7 @@
             this.Text = "Taller";
             this.GrbPractica.ResumeLayout(false);
             this.GrbPractica.PerformLayout();
+            this.GrbPractica4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,5 +296,8 @@
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblIdentificacion;
         private System.Windows.Forms.TextBox TxtListaPersonas;
+        private System.Windows.Forms.GroupBox GrbPractica4;
+        private System.Windows.Forms.Button BtnGenerico;
+        private System.Windows.Forms.Button BtnEjemploObjeto;
     }
 }
