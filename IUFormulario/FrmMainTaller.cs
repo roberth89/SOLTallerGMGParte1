@@ -194,5 +194,19 @@ namespace IUFormularios
 
         }
 
+        private void BtnLinkedList_Click(object sender, EventArgs e)
+        {
+            var objLinkedList = LogicaNegocio.Lista.LinkedListEjemplo();
+            // Tarea , agregar en un control tipo TextBox, para poder tener una represetacion grafica.
+
+
+        }
+
+        private void BtnCola_Click(object sender, EventArgs e)
+        {
+            var objCola = LogicaNegocio.Lista.Cola();
+            // Tarea , agregar en un control tipo TextBox, para poder tener una represetacion grafica.
+
+        }
     }
 }

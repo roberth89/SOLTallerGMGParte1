@@ -34,18 +34,31 @@ namespace LogicaNegocio
         public static LinkedList<int> LinkedListEjemplo()
         {
             LinkedList<int> numerosLinkedList = new LinkedList<int>();
-
+            LinkedList<int> numerosLinkedListLast = new LinkedList<int>();
             int[] array = new int[6] { 10, 7, 6, 4, 2, 0 };
-
-            foreach (var itemNumero in array)
+            foreach (int itemNumero in array)
             {
                 numerosLinkedList.AddFirst(itemNumero);
-                //numerosLinkedList.AddLast(itemNumero);
+                numerosLinkedListLast.AddLast(itemNumero);
             }
             numerosLinkedList.Remove(7);
-
-
             return numerosLinkedList;
+        }
+
+        public static Queue<int> Cola()
+        {
+            Queue<int> numerosCola = new Queue<int>();
+            int[] array = new int[6] { 10, 7, 6, 4, 2, 0 };
+
+            foreach (int itemNumero in array)
+            {
+                numerosCola.Enqueue(itemNumero);
+            }
+
+            numerosCola.Dequeue();
+
+            return numerosCola;
+
         }
 
     }

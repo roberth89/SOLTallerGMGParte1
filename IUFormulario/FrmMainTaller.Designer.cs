@@ -51,6 +51,7 @@
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblIdentificacion = new System.Windows.Forms.Label();
             this.BtnLinkedList = new System.Windows.Forms.Button();
+            this.BtnCola = new System.Windows.Forms.Button();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
             this.GrbPractica4.SuspendLayout();
@@ -264,12 +265,24 @@
             this.BtnLinkedList.TabIndex = 10;
             this.BtnLinkedList.Text = "LinkedList";
             this.BtnLinkedList.UseVisualStyleBackColor = true;
+            this.BtnLinkedList.Click += new System.EventHandler(this.BtnLinkedList_Click);
+            // 
+            // BtnCola
+            // 
+            this.BtnCola.Location = new System.Drawing.Point(386, 217);
+            this.BtnCola.Name = "BtnCola";
+            this.BtnCola.Size = new System.Drawing.Size(109, 23);
+            this.BtnCola.TabIndex = 11;
+            this.BtnCola.Text = "Cola";
+            this.BtnCola.UseVisualStyleBackColor = true;
+            this.BtnCola.Click += new System.EventHandler(this.BtnCola_Click);
             // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 624);
+            this.Controls.Add(this.BtnCola);
             this.Controls.Add(this.BtnLinkedList);
             this.Controls.Add(this.GrbPractica);
             this.Controls.Add(this.TxtList);
@@ -313,5 +326,6 @@
         private System.Windows.Forms.Button BtnGenerico;
         private System.Windows.Forms.Button BtnEjemploObjeto;
         private System.Windows.Forms.Button BtnLinkedList;
+        private System.Windows.Forms.Button BtnCola;
     }
 }
