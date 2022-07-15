@@ -243,6 +243,7 @@
             this.BtnEjemploObjeto.TabIndex = 0;
             this.BtnEjemploObjeto.Text = "Ejemplo Object";
             this.BtnEjemploObjeto.UseVisualStyleBackColor = true;
+            this.BtnEjemploObjeto.Click += new System.EventHandler(this.BtnEjemploObjeto_Click);
             // 
             // BtnGenerico
             // 
@@ -252,6 +253,7 @@
             this.BtnGenerico.TabIndex = 1;
             this.BtnGenerico.Text = "Ejemplo Generic";
             this.BtnGenerico.UseVisualStyleBackColor = true;
+            this.BtnGenerico.Click += new System.EventHandler(this.BtnGenerico_Click);
             // 
             // FrmMainTaller
             // 

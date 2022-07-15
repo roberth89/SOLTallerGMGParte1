@@ -119,6 +119,41 @@ namespace IUFormularios
             TxtList.Text = mensaje;
         }
 
-  
+        private void BtnEjemploObjeto_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LlamarEjemploNoGenerico();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BtnGenerico_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LlamarEjemploGenerico();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LlamarEjemploNoGenerico()
+        {
+
+        }
+
+        private void LlamarEjemploGenerico()
+        {
+
+        }
+
     }
 }
