@@ -39,6 +39,9 @@
             this.BtnList = new System.Windows.Forms.Button();
             this.TxtList = new System.Windows.Forms.TextBox();
             this.GrbPractica = new System.Windows.Forms.GroupBox();
+            this.GrbPractica4 = new System.Windows.Forms.GroupBox();
+            this.BtnGenerico = new System.Windows.Forms.Button();
+            this.BtnEjemploObjeto = new System.Windows.Forms.Button();
             this.TxtListaPersonas = new System.Windows.Forms.TextBox();
             this.TxtApellido2 = new System.Windows.Forms.TextBox();
             this.TxtApellido1 = new System.Windows.Forms.TextBox();
@@ -47,9 +50,7 @@
             this.LblApellido1 = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.LblIdentificacion = new System.Windows.Forms.Label();
-            this.GrbPractica4 = new System.Windows.Forms.GroupBox();
-            this.BtnEjemploObjeto = new System.Windows.Forms.Button();
-            this.BtnGenerico = new System.Windows.Forms.Button();
+            this.BtnLinkedList = new System.Windows.Forms.Button();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
             this.GrbPractica4.SuspendLayout();
@@ -161,6 +162,37 @@
             this.GrbPractica.TabStop = false;
             this.GrbPractica.Text = "Practica 3";
             // 
+            // GrbPractica4
+            // 
+            this.GrbPractica4.Controls.Add(this.BtnGenerico);
+            this.GrbPractica4.Controls.Add(this.BtnEjemploObjeto);
+            this.GrbPractica4.Location = new System.Drawing.Point(457, 22);
+            this.GrbPractica4.Name = "GrbPractica4";
+            this.GrbPractica4.Size = new System.Drawing.Size(244, 98);
+            this.GrbPractica4.TabIndex = 9;
+            this.GrbPractica4.TabStop = false;
+            this.GrbPractica4.Text = "Practica #4";
+            // 
+            // BtnGenerico
+            // 
+            this.BtnGenerico.Location = new System.Drawing.Point(24, 62);
+            this.BtnGenerico.Name = "BtnGenerico";
+            this.BtnGenerico.Size = new System.Drawing.Size(120, 23);
+            this.BtnGenerico.TabIndex = 1;
+            this.BtnGenerico.Text = "Ejemplo Generic";
+            this.BtnGenerico.UseVisualStyleBackColor = true;
+            this.BtnGenerico.Click += new System.EventHandler(this.BtnGenerico_Click);
+            // 
+            // BtnEjemploObjeto
+            // 
+            this.BtnEjemploObjeto.Location = new System.Drawing.Point(24, 28);
+            this.BtnEjemploObjeto.Name = "BtnEjemploObjeto";
+            this.BtnEjemploObjeto.Size = new System.Drawing.Size(120, 23);
+            this.BtnEjemploObjeto.TabIndex = 0;
+            this.BtnEjemploObjeto.Text = "Ejemplo Object";
+            this.BtnEjemploObjeto.UseVisualStyleBackColor = true;
+            this.BtnEjemploObjeto.Click += new System.EventHandler(this.BtnEjemploObjeto_Click);
+            // 
             // TxtListaPersonas
             // 
             this.TxtListaPersonas.Location = new System.Drawing.Point(6, 146);
@@ -224,42 +256,21 @@
             this.LblIdentificacion.TabIndex = 0;
             this.LblIdentificacion.Text = "Identificacion: ";
             // 
-            // GrbPractica4
+            // BtnLinkedList
             // 
-            this.GrbPractica4.Controls.Add(this.BtnGenerico);
-            this.GrbPractica4.Controls.Add(this.BtnEjemploObjeto);
-            this.GrbPractica4.Location = new System.Drawing.Point(457, 22);
-            this.GrbPractica4.Name = "GrbPractica4";
-            this.GrbPractica4.Size = new System.Drawing.Size(244, 98);
-            this.GrbPractica4.TabIndex = 9;
-            this.GrbPractica4.TabStop = false;
-            this.GrbPractica4.Text = "Practica #4";
-            // 
-            // BtnEjemploObjeto
-            // 
-            this.BtnEjemploObjeto.Location = new System.Drawing.Point(24, 28);
-            this.BtnEjemploObjeto.Name = "BtnEjemploObjeto";
-            this.BtnEjemploObjeto.Size = new System.Drawing.Size(120, 23);
-            this.BtnEjemploObjeto.TabIndex = 0;
-            this.BtnEjemploObjeto.Text = "Ejemplo Object";
-            this.BtnEjemploObjeto.UseVisualStyleBackColor = true;
-            this.BtnEjemploObjeto.Click += new System.EventHandler(this.BtnEjemploObjeto_Click);
-            // 
-            // BtnGenerico
-            // 
-            this.BtnGenerico.Location = new System.Drawing.Point(24, 62);
-            this.BtnGenerico.Name = "BtnGenerico";
-            this.BtnGenerico.Size = new System.Drawing.Size(120, 23);
-            this.BtnGenerico.TabIndex = 1;
-            this.BtnGenerico.Text = "Ejemplo Generic";
-            this.BtnGenerico.UseVisualStyleBackColor = true;
-            this.BtnGenerico.Click += new System.EventHandler(this.BtnGenerico_Click);
+            this.BtnLinkedList.Location = new System.Drawing.Point(384, 175);
+            this.BtnLinkedList.Name = "BtnLinkedList";
+            this.BtnLinkedList.Size = new System.Drawing.Size(111, 23);
+            this.BtnLinkedList.TabIndex = 10;
+            this.BtnLinkedList.Text = "LinkedList";
+            this.BtnLinkedList.UseVisualStyleBackColor = true;
             // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 624);
+            this.Controls.Add(this.BtnLinkedList);
             this.Controls.Add(this.GrbPractica);
             this.Controls.Add(this.TxtList);
             this.Controls.Add(this.BtnList);
@@ -301,5 +312,6 @@
         private System.Windows.Forms.GroupBox GrbPractica4;
         private System.Windows.Forms.Button BtnGenerico;
         private System.Windows.Forms.Button BtnEjemploObjeto;
+        private System.Windows.Forms.Button BtnLinkedList;
     }
 }
