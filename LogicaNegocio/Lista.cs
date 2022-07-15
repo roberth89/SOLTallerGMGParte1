@@ -31,5 +31,22 @@ namespace LogicaNegocio
             return personaNombres;
         }
 
+        public static LinkedList<int> LinkedListEjemplo()
+        {
+            LinkedList<int> numerosLinkedList = new LinkedList<int>();
+
+            int[] array = new int[6] { 10, 7, 6, 4, 2, 0 };
+
+            foreach (var itemNumero in array)
+            {
+                numerosLinkedList.AddFirst(itemNumero);
+                //numerosLinkedList.AddLast(itemNumero);
+            }
+            numerosLinkedList.Remove(7);
+
+
+            return numerosLinkedList;
+        }
+
     }
 }

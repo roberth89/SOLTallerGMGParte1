@@ -192,7 +192,6 @@ namespace IUFormularios
             Modelo.Persona objPersona = objAlmacenaObjetoGenericoPersonas.GetElemento(3);
             MessageBox.Show(objPersona.Nombre + " " + objPersona.Identificacion);
 
-
         }
 
     }
