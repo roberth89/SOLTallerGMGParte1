@@ -71,10 +71,32 @@ namespace LogicaNegocio
                 numerosPila.Push(item);
             }
 
-            numerosPila.Pop();
+            if (numerosPila.Count > 0)
+            {
+                numerosPila.Pop();
+            }      
 
             return numerosPila;
 
+        }
+
+        public static Dictionary<string, int> Diccionario()
+        {
+            Dictionary<string, int> edades = new Dictionary<string, int>();
+
+            edades.Add("Roberto", 33);
+            edades.Add("Juan", 18);
+
+            edades["Maria"] = 25;
+            edades["Antonio"] = 88;
+
+            foreach (KeyValuePair<string,int> item in edades)
+            {
+                //item.Value
+                //item.Key
+            }
+
+            return edades;
         }
 
     }

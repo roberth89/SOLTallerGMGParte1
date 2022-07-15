@@ -211,7 +211,15 @@ namespace IUFormularios
 
         private void btnPila_Click(object sender, EventArgs e)
         {
-            Stack<int> objPila = LogicaNegocio.Lista.Pila();   
+            Stack<int> objPila = LogicaNegocio.Lista.Pila();
+            // Tarea , agregar en un control tipo TextBox, para poder tener una represetacion grafica
+        }
+
+        private void BtnDiccionario_Click(object sender, EventArgs e)
+        {
+            var objDi = LogicaNegocio.Lista.Diccionario();
+            // Tarea , agregar en un control tipo TextBox, para poder tener una represetacion grafica
+
         }
     }
 }

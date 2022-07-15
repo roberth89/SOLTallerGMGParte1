@@ -53,6 +53,7 @@
             this.BtnLinkedList = new System.Windows.Forms.Button();
             this.BtnCola = new System.Windows.Forms.Button();
             this.btnPila = new System.Windows.Forms.Button();
+            this.BtnDiccionario = new System.Windows.Forms.Button();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
             this.GrbPractica4.SuspendLayout();
@@ -288,11 +289,22 @@
             this.btnPila.UseVisualStyleBackColor = true;
             this.btnPila.Click += new System.EventHandler(this.btnPila_Click);
             // 
+            // BtnDiccionario
+            // 
+            this.BtnDiccionario.Location = new System.Drawing.Point(521, 217);
+            this.BtnDiccionario.Name = "BtnDiccionario";
+            this.BtnDiccionario.Size = new System.Drawing.Size(115, 23);
+            this.BtnDiccionario.TabIndex = 13;
+            this.BtnDiccionario.Text = "Dictionary";
+            this.BtnDiccionario.UseVisualStyleBackColor = true;
+            this.BtnDiccionario.Click += new System.EventHandler(this.BtnDiccionario_Click);
+            // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 624);
+            this.Controls.Add(this.BtnDiccionario);
             this.Controls.Add(this.btnPila);
             this.Controls.Add(this.BtnCola);
             this.Controls.Add(this.BtnLinkedList);
@@ -340,5 +352,6 @@
         private System.Windows.Forms.Button BtnLinkedList;
         private System.Windows.Forms.Button BtnCola;
         private System.Windows.Forms.Button btnPila;
+        private System.Windows.Forms.Button BtnDiccionario;
     }
 }
