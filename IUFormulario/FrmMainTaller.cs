@@ -170,6 +170,28 @@ namespace IUFormularios
 
         private void LlamarEjemploGenerico()
         {
+            // Ejemplo de clase generica String.
+            LogicaNegocio.AlmacenaObjetoGenerico<string> objAlmacenaObjetoGenerico 
+                = new LogicaNegocio.AlmacenaObjetoGenerico<string>(4);
+
+            objAlmacenaObjetoGenerico.Agregar("Roberto"); 
+            objAlmacenaObjetoGenerico.Agregar("Fernando");
+            objAlmacenaObjetoGenerico.Agregar("Ray");
+            objAlmacenaObjetoGenerico.Agregar("Nestor"); 
+            string nombrePersona = objAlmacenaObjetoGenerico.GetElemento(3);
+            MessageBox.Show(nombrePersona);
+
+            // Ejemplo de generico que recibe un objeto persona
+            LogicaNegocio.AlmacenaObjetoGenerico<Modelo.Persona> objAlmacenaObjetoGenericoPersonas 
+                = new LogicaNegocio.AlmacenaObjetoGenerico<Modelo.Persona>(4);
+            objAlmacenaObjetoGenericoPersonas.Agregar(new Modelo.Persona { Identificacion = "01", Nombre = "Roberto" });
+            objAlmacenaObjetoGenericoPersonas.Agregar(new Modelo.Persona { Identificacion = "02", Nombre = "Fernando" });
+            objAlmacenaObjetoGenericoPersonas.Agregar(new Modelo.Persona { Identificacion = "03", Nombre = "Ray" });
+            objAlmacenaObjetoGenericoPersonas.Agregar(new Modelo.Persona { Identificacion = "04", Nombre = "Nestor" });
+
+            Modelo.Persona objPersona = objAlmacenaObjetoGenericoPersonas.GetElemento(3);
+            MessageBox.Show(objPersona.Nombre + " " + objPersona.Identificacion);
+
 
         }
 
