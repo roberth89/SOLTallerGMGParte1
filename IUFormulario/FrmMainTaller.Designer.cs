@@ -54,9 +54,12 @@
             this.BtnCola = new System.Windows.Forms.Button();
             this.btnPila = new System.Windows.Forms.Button();
             this.BtnDiccionario = new System.Windows.Forms.Button();
+            this.GrbPractica5 = new System.Windows.Forms.GroupBox();
+            this.btnLambdaSuma = new System.Windows.Forms.Button();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
             this.GrbPractica4.SuspendLayout();
+            this.GrbPractica5.SuspendLayout();
             this.SuspendLayout();
             // 
             // LblApellido2
@@ -160,7 +163,7 @@
             this.GrbPractica.Controls.Add(this.LblIdentificacion);
             this.GrbPractica.Location = new System.Drawing.Point(12, 254);
             this.GrbPractica.Name = "GrbPractica";
-            this.GrbPractica.Size = new System.Drawing.Size(739, 333);
+            this.GrbPractica.Size = new System.Drawing.Size(739, 311);
             this.GrbPractica.TabIndex = 9;
             this.GrbPractica.TabStop = false;
             this.GrbPractica.Text = "Practica 3";
@@ -299,11 +302,32 @@
             this.BtnDiccionario.UseVisualStyleBackColor = true;
             this.BtnDiccionario.Click += new System.EventHandler(this.BtnDiccionario_Click);
             // 
+            // GrbPractica5
+            // 
+            this.GrbPractica5.Controls.Add(this.btnLambdaSuma);
+            this.GrbPractica5.Location = new System.Drawing.Point(18, 571);
+            this.GrbPractica5.Name = "GrbPractica5";
+            this.GrbPractica5.Size = new System.Drawing.Size(727, 77);
+            this.GrbPractica5.TabIndex = 14;
+            this.GrbPractica5.TabStop = false;
+            this.GrbPractica5.Text = "Practica #5";
+            // 
+            // btnLambdaSuma
+            // 
+            this.btnLambdaSuma.Location = new System.Drawing.Point(25, 37);
+            this.btnLambdaSuma.Name = "btnLambdaSuma";
+            this.btnLambdaSuma.Size = new System.Drawing.Size(95, 23);
+            this.btnLambdaSuma.TabIndex = 0;
+            this.btnLambdaSuma.Text = "LambdaSuma";
+            this.btnLambdaSuma.UseVisualStyleBackColor = true;
+            this.btnLambdaSuma.Click += new System.EventHandler(this.btnLambdaSuma_Click);
+            // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 624);
+            this.ClientSize = new System.Drawing.Size(763, 660);
+            this.Controls.Add(this.GrbPractica5);
             this.Controls.Add(this.BtnDiccionario);
             this.Controls.Add(this.btnPila);
             this.Controls.Add(this.BtnCola);
@@ -321,6 +345,7 @@
             this.GrbPractica.ResumeLayout(false);
             this.GrbPractica.PerformLayout();
             this.GrbPractica4.ResumeLayout(false);
+            this.GrbPractica5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +378,7 @@
         private System.Windows.Forms.Button BtnCola;
         private System.Windows.Forms.Button btnPila;
         private System.Windows.Forms.Button BtnDiccionario;
+        private System.Windows.Forms.GroupBox GrbPractica5;
+        private System.Windows.Forms.Button btnLambdaSuma;
     }
 }

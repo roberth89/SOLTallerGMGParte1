@@ -221,5 +221,13 @@ namespace IUFormularios
             // Tarea , agregar en un control tipo TextBox, para poder tener una represetacion grafica
 
         }
+
+        private void btnLambdaSuma_Click(object sender, EventArgs e)
+        {
+            var objLambda = new LogicaNegocio.Lambda();
+
+            // Tarea permitir que LambdaSuma reciba 2 parametros para realizar la operacion
+            int resultado = objLambda.LambdaSuma();
+        }
     }
 }
