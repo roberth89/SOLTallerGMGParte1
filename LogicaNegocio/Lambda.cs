@@ -7,11 +7,11 @@ namespace LogicaNegocio
 {
     public class Lambda
     {
-        public int LambdaSuma()
+        public int LambdaSuma(int numero1, int numero2)
         {
             Func<int, int, int> suma = (a, b) => a + b;
             // Parte de la tarea.
-            int resultado = suma(2, 6);
+            int resultado = suma(numero1, numero2);
 
             return resultado;
         }

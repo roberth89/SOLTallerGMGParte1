@@ -171,18 +171,18 @@ namespace IUFormularios
         private void LlamarEjemploGenerico()
         {
             // Ejemplo de clase generica String.
-            LogicaNegocio.AlmacenaObjetoGenerico<string> objAlmacenaObjetoGenerico 
+            LogicaNegocio.AlmacenaObjetoGenerico<string> objAlmacenaObjetoGenerico
                 = new LogicaNegocio.AlmacenaObjetoGenerico<string>(4);
 
-            objAlmacenaObjetoGenerico.Agregar("Roberto"); 
+            objAlmacenaObjetoGenerico.Agregar("Roberto");
             objAlmacenaObjetoGenerico.Agregar("Fernando");
             objAlmacenaObjetoGenerico.Agregar("Ray");
-            objAlmacenaObjetoGenerico.Agregar("Nestor"); 
+            objAlmacenaObjetoGenerico.Agregar("Nestor");
             string nombrePersona = objAlmacenaObjetoGenerico.GetElemento(3);
             MessageBox.Show(nombrePersona);
 
             // Ejemplo de generico que recibe un objeto persona
-            LogicaNegocio.AlmacenaObjetoGenerico<Modelo.Persona> objAlmacenaObjetoGenericoPersonas 
+            LogicaNegocio.AlmacenaObjetoGenerico<Modelo.Persona> objAlmacenaObjetoGenericoPersonas
                 = new LogicaNegocio.AlmacenaObjetoGenerico<Modelo.Persona>(4);
             objAlmacenaObjetoGenericoPersonas.Agregar(new Modelo.Persona { Identificacion = "01", Nombre = "Roberto" });
             objAlmacenaObjetoGenericoPersonas.Agregar(new Modelo.Persona { Identificacion = "02", Nombre = "Fernando" });
@@ -224,10 +224,13 @@ namespace IUFormularios
 
         private void btnLambdaSuma_Click(object sender, EventArgs e)
         {
+
             var objLambda = new LogicaNegocio.Lambda();
 
             // Tarea permitir que LambdaSuma reciba 2 parametros para realizar la operacion
-            int resultado = objLambda.LambdaSuma();
+            int resultado = objLambda.LambdaSuma(Numero1, Numero2);
+
+            MessageBox.Show(resultado.ToString());
         }
 
         private void BtnLambdaMayorNumeros_Click(object sender, EventArgs e)
@@ -240,8 +243,23 @@ namespace IUFormularios
         private void BtnLambdaPares_Click(object sender, EventArgs e)
         {
             var objLambda = new LogicaNegocio.Lambda();
-           
+
             IEnumerable<int> resultado = objLambda.ObtenerPares();
         }
+
+        // Variables deberia ir arriba pero es para el ejemplo del formulario
+        public int Numero1 { get; set; }
+        public int Numero2 { get; set; }
+
+        private void BtnAbrirFormulario_Click(object sender, EventArgs e)
+        {
+           
+            var objFormulario = new FrmInput();
+            AddOwnedForm(objFormulario);
+
+            objFormulario.Show();
+        }
     }
+
+
 }

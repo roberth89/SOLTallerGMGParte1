@@ -55,6 +55,7 @@
             this.btnPila = new System.Windows.Forms.Button();
             this.BtnDiccionario = new System.Windows.Forms.Button();
             this.GrbPractica5 = new System.Windows.Forms.GroupBox();
+            this.BtnAbrirFormulario = new System.Windows.Forms.Button();
             this.BtnLambdaPares = new System.Windows.Forms.Button();
             this.BtnLambdaMayorNumeros = new System.Windows.Forms.Button();
             this.btnLambdaSuma = new System.Windows.Forms.Button();
@@ -306,6 +307,7 @@
             // 
             // GrbPractica5
             // 
+            this.GrbPractica5.Controls.Add(this.BtnAbrirFormulario);
             this.GrbPractica5.Controls.Add(this.BtnLambdaPares);
             this.GrbPractica5.Controls.Add(this.BtnLambdaMayorNumeros);
             this.GrbPractica5.Controls.Add(this.btnLambdaSuma);
@@ -315,6 +317,16 @@
             this.GrbPractica5.TabIndex = 14;
             this.GrbPractica5.TabStop = false;
             this.GrbPractica5.Text = "Practica #5";
+            // 
+            // BtnAbrirFormulario
+            // 
+            this.BtnAbrirFormulario.Location = new System.Drawing.Point(159, 0);
+            this.BtnAbrirFormulario.Name = "BtnAbrirFormulario";
+            this.BtnAbrirFormulario.Size = new System.Drawing.Size(114, 23);
+            this.BtnAbrirFormulario.TabIndex = 3;
+            this.BtnAbrirFormulario.Text = "Abrir Formulario";
+            this.BtnAbrirFormulario.UseVisualStyleBackColor = true;
+            this.BtnAbrirFormulario.Click += new System.EventHandler(this.BtnAbrirFormulario_Click);
             // 
             // BtnLambdaPares
             // 
@@ -406,5 +418,6 @@
         private System.Windows.Forms.Button btnLambdaSuma;
         private System.Windows.Forms.Button BtnLambdaMayorNumeros;
         private System.Windows.Forms.Button BtnLambdaPares;
+        private System.Windows.Forms.Button BtnAbrirFormulario;
     }
 }
