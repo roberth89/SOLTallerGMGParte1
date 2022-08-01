@@ -224,14 +224,29 @@ namespace IUFormularios
 
         private void btnLambdaSuma_Click(object sender, EventArgs e)
         {
+            var primerResult = 0;
+            var segundoResult = 0;
+          
+            var objFormulario1 = new FrmInputTest();
+            AddOwnedForm(objFormulario1);
+            objFormulario1.ShowDialog();
+
+            primerResult = this.Numero1;
+
+            var objFormulario2 = new FrmInputTest();
+            AddOwnedForm(objFormulario2);
+            objFormulario2.ShowDialog();
+
+            segundoResult = this.Numero1;
 
             var objLambda = new LogicaNegocio.Lambda();
-
-            // Tarea permitir que LambdaSuma reciba 2 parametros para realizar la operacion
-            int resultado = objLambda.LambdaSuma(Numero1, Numero2);
-
+            int resultado = objLambda.LambdaSuma(primerResult, segundoResult);
             MessageBox.Show(resultado.ToString());
         }
+
+
+
+
 
         private void BtnLambdaMayorNumeros_Click(object sender, EventArgs e)
         {
@@ -253,7 +268,7 @@ namespace IUFormularios
 
         private void BtnAbrirFormulario_Click(object sender, EventArgs e)
         {
-           
+
             var objFormulario = new FrmInput();
             AddOwnedForm(objFormulario);
 
