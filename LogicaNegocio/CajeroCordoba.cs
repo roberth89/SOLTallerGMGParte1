@@ -4,12 +4,11 @@ using System.Text;
 
 namespace LogicaNegocio
 {
-    public class CajeroDolar : Cajero
+    public class CajeroCordoba : Cajero
     {
-
-        public CajeroDolar(decimal dineroActual)
+        public CajeroCordoba(decimal dineroActual)
         {
-            TipoCambio = 669.79M;
+            TipoCambio = 18.63M;
         }
 
         /// <summary>
@@ -23,7 +22,7 @@ namespace LogicaNegocio
         public override decimal RetirarDinero(decimal montoRetiro, ref string mensaje, string tipoCajero)
         {
             montoRetiro = AsignarTipoCambio(montoRetiro);
-            tipoCajero =  "Cajero Dolar: ";
+            tipoCajero = "Cajero Cordoba";
             var ejemplo = base.RetirarDinero(montoRetiro, ref mensaje, tipoCajero);
             return ejemplo;
         }
@@ -33,7 +32,5 @@ namespace LogicaNegocio
             montoRetiro = montoRetiro * TipoCambio;
             return montoRetiro;
         }
-
-
     }
 }

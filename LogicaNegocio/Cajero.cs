@@ -43,7 +43,7 @@ namespace LogicaNegocio
         }
 
 
-        public decimal RetirarDinero(decimal montoRetiro, ref string mensaje, string tipoCajero = "Cajero Base: ")
+        public virtual decimal RetirarDinero(decimal montoRetiro, ref string mensaje, string tipoCajero = "Cajero Base: ")
         {
             try
             {

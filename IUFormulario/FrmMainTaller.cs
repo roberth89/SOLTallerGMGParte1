@@ -36,7 +36,14 @@ namespace IUFormularios
 
         private string RetirarDinero()
         {
-            LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero();
+            decimal dineroActual = LogicaNegocio.Cuenta.DineroActual;
+
+            // asignar esta instancia segun un combobox.
+            LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero(dineroActual);
+
+            LogicaNegocio.Cajero _objCajero1 = new LogicaNegocio.CajeroDolar(dineroActual);
+
+            LogicaNegocio.Cajero _objCajero2 = new LogicaNegocio.CajeroCordoba(dineroActual);
 
             string montoRetiro = TxtRetiro.Text;
             string mensajeRetorno = string.Empty;
