@@ -11,6 +11,8 @@ namespace LogicaNegocio
         /// </summary>
         private decimal _dineroActual = 10000;
 
+        private decimal _tipoCambio = 0;
+
         private int _contador = 0;
 
         private const int MAXIMO = 5;
@@ -27,6 +29,13 @@ namespace LogicaNegocio
             _contador = contador;
         }
 
+        public decimal TipoCambio
+        {
+            get { return _tipoCambio; }
+            set { _tipoCambio = value; }
+        }
+
+
         public decimal DineroActual
         {
             get { return _dineroActual; }
@@ -34,14 +43,15 @@ namespace LogicaNegocio
         }
 
 
-        public decimal RetirarDinero(decimal montoRetiro, ref string mensaje)
+        public decimal RetirarDinero(decimal montoRetiro, ref string mensaje, string tipoCajero = "Cajero Base: ")
         {
             try
             {
+                mensaje = tipoCajero;
 
                 if (montoRetiro > DineroActual)
                 {
-                    mensaje = "El monto de retiro: " + montoRetiro + " es mayor al diponible :( ! " + DineroActual;
+                    mensaje += "El monto de retiro: " + montoRetiro + " es mayor al diponible :( ! " + DineroActual;
                 }
                 else
                 {
@@ -49,7 +59,7 @@ namespace LogicaNegocio
                     DineroActual = DineroActual - montoRetiro;
                     //DineroActual -= montoRetiro;
                     _contador++;
-                    mensaje = "Cuide su dinero tiene disponible " + DineroActual;
+                    mensaje += "Cuide su dinero tiene disponible " + DineroActual;
                 }
                 return DineroActual;
             }

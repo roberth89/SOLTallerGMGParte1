@@ -11,7 +11,7 @@ namespace IUFormularios
     public partial class FrmMainTaller : Form
     {
 
-        LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero();
+        //LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero();
 
         List<Modelo.Persona> _listaPersonas = new List<Modelo.Persona>();
 
@@ -24,7 +24,7 @@ namespace IUFormularios
 
         private void BtnConsulta_Click(object sender, EventArgs e)
         {
-            TxtConsulta.Text = _objCajero.DineroActual.ToString();
+            TxtConsulta.Text = LogicaNegocio.Cuenta.DineroActual.ToString();
 
         }
 
@@ -36,10 +36,13 @@ namespace IUFormularios
 
         private string RetirarDinero()
         {
+            LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero();
+
             string montoRetiro = TxtRetiro.Text;
             string mensajeRetorno = string.Empty;
             decimal valorRetorno = 0;
             valorRetorno = _objCajero.RetirarDinero(Convert.ToDecimal(montoRetiro), ref mensajeRetorno);
+            LogicaNegocio.Cuenta.DineroActual = valorRetorno;
             TxtConsulta.Text = valorRetorno.ToString();
             txtMensajeCajero.Text = mensajeRetorno;
             return mensajeRetorno;
