@@ -12,6 +12,7 @@ namespace IUFormularios
     {
 
         LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero();
+
         List<Modelo.Persona> _listaPersonas = new List<Modelo.Persona>();
 
         private const string SEPARADOR = "---";
