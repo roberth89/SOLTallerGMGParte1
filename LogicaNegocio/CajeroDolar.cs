@@ -9,6 +9,7 @@ namespace LogicaNegocio
 
         public CajeroDolar(decimal dineroActual)
         {
+            DineroActual = dineroActual;
             TipoCambio = 669.79M;
         }
 

@@ -39,16 +39,19 @@ namespace IUFormularios
             decimal dineroActual = LogicaNegocio.Cuenta.DineroActual;
 
             // asignar esta instancia segun un combobox.
-            LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero(dineroActual);
+           // LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero(dineroActual);
 
-            LogicaNegocio.Cajero _objCajero1 = new LogicaNegocio.CajeroDolar(dineroActual);
+            LogicaNegocio.Cajero _objCajero = new LogicaNegocio.CajeroDolar(dineroActual);
 
-            LogicaNegocio.Cajero _objCajero2 = new LogicaNegocio.CajeroCordoba(dineroActual);
+           // LogicaNegocio.Cajero _objCajero2 = new LogicaNegocio.CajeroCordoba(dineroActual);
 
             string montoRetiro = TxtRetiro.Text;
             string mensajeRetorno = string.Empty;
             decimal valorRetorno = 0;
+
             valorRetorno = _objCajero.RetirarDinero(Convert.ToDecimal(montoRetiro), ref mensajeRetorno);
+
+
             LogicaNegocio.Cuenta.DineroActual = valorRetorno;
             TxtConsulta.Text = valorRetorno.ToString();
             txtMensajeCajero.Text = mensajeRetorno;
