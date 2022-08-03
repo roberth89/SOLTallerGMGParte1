@@ -38,12 +38,23 @@ namespace IUFormularios
         {
             decimal dineroActual = LogicaNegocio.Cuenta.DineroActual;
 
+            LogicaNegocio.Cajero _objCajero;
+
             // asignar esta instancia segun un combobox.
-           // LogicaNegocio.Cajero _objCajero = new LogicaNegocio.Cajero(dineroActual);
+            //CboTipoCajero.Text
+            if (CboTipoCajero.SelectedValue.ToString() == "0")
+            {
+                _objCajero = new LogicaNegocio.Cajero(dineroActual);
+            }
+            else if (CboTipoCajero.SelectedValue.ToString() == "1")
+            {
+                _objCajero = new LogicaNegocio.CajeroDolar(dineroActual);
+            }
+            else  
+            {
+                _objCajero = new LogicaNegocio.CajeroCordoba(dineroActual);
+            }      
 
-            LogicaNegocio.Cajero _objCajero = new LogicaNegocio.CajeroDolar(dineroActual);
-
-           // LogicaNegocio.Cajero _objCajero2 = new LogicaNegocio.CajeroCordoba(dineroActual);
 
             string montoRetiro = TxtRetiro.Text;
             string mensajeRetorno = string.Empty;
@@ -240,7 +251,7 @@ namespace IUFormularios
         {
             var primerResult = 0;
             var segundoResult = 0;
-          
+
             var objFormulario1 = new FrmInputTest();
             AddOwnedForm(objFormulario1);
             objFormulario1.ShowDialog();
@@ -288,6 +299,30 @@ namespace IUFormularios
 
             objFormulario.Show();
         }
+
+        private void FrmMainTaller_Load(object sender, EventArgs e)
+        {
+            LlenarCombo();
+        }
+
+        private void LlenarCombo()
+        {
+            List<Tuple<Int32, String>> listaItems = new List<Tuple<int, string>>();
+            listaItems.Add(Tuple.Create<Int32, String>(0, "Cajero Colones"));
+            listaItems.Add(Tuple.Create<Int32, String>(1, "Cajero Dolares"));
+            listaItems.Add(Tuple.Create<Int32, String>(2, "Cajero Cordoba"));
+            // Asigna items a el combobox
+            CboTipoCajero.DataSource = listaItems;
+
+            /* Asigna la propiedad a desplegar en el combobox
+               En un objeto tupla la propiedad que contiene
+               el primer elemento es llamada Item1, el segundo Item2
+               y asi sucesivamente */
+            CboTipoCajero.DisplayMember = "Item2";
+            // Asigna la propiedad como valores de los items del combobox
+            CboTipoCajero.ValueMember = "Item1";
+        }
+
     }
 
 

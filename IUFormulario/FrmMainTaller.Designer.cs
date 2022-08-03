@@ -59,6 +59,7 @@
             this.BtnLambdaPares = new System.Windows.Forms.Button();
             this.BtnLambdaMayorNumeros = new System.Windows.Forms.Button();
             this.btnLambdaSuma = new System.Windows.Forms.Button();
+            this.CboTipoCajero = new System.Windows.Forms.ComboBox();
             LblApellido2 = new System.Windows.Forms.Label();
             this.GrbPractica.SuspendLayout();
             this.GrbPractica4.SuspendLayout();
@@ -152,6 +153,7 @@
             // 
             // GrbPractica
             // 
+            this.GrbPractica.Controls.Add(this.CboTipoCajero);
             this.GrbPractica.Controls.Add(this.GrbPractica4);
             this.GrbPractica.Controls.Add(this.TxtListaPersonas);
             this.GrbPractica.Controls.Add(this.TxtApellido2);
@@ -358,6 +360,14 @@
             this.btnLambdaSuma.UseVisualStyleBackColor = true;
             this.btnLambdaSuma.Click += new System.EventHandler(this.btnLambdaSuma_Click);
             // 
+            // CboTipoCajero
+            // 
+            this.CboTipoCajero.FormattingEnabled = true;
+            this.CboTipoCajero.Location = new System.Drawing.Point(339, 60);
+            this.CboTipoCajero.Name = "CboTipoCajero";
+            this.CboTipoCajero.Size = new System.Drawing.Size(99, 23);
+            this.CboTipoCajero.TabIndex = 10;
+            // 
             // FrmMainTaller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -378,6 +388,7 @@
             this.Controls.Add(this.BtnConsulta);
             this.Name = "FrmMainTaller";
             this.Text = "Taller";
+            this.Load += new System.EventHandler(this.FrmMainTaller_Load);
             this.GrbPractica.ResumeLayout(false);
             this.GrbPractica.PerformLayout();
             this.GrbPractica4.ResumeLayout(false);
@@ -419,5 +430,6 @@
         private System.Windows.Forms.Button BtnLambdaMayorNumeros;
         private System.Windows.Forms.Button BtnLambdaPares;
         private System.Windows.Forms.Button BtnAbrirFormulario;
+        private System.Windows.Forms.ComboBox CboTipoCajero;
     }
 }
