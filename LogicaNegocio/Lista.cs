@@ -26,8 +26,7 @@ namespace LogicaNegocio
             {
                 "Nestor","Hazel", "Fernando", "Paco"
             };
-            // personaNombres.Add("Nestor");
-            // personaNombres.Add("Hazel");
+            // otra forma de agregar personaNombres.Add("Hazel");
             return personaNombres;
         }
 

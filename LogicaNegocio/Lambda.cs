@@ -42,9 +42,7 @@ namespace LogicaNegocio
 
             var pares = colas.Where(GetPares);
 
-            // Modo ejemplo de otra forma de hacerlo sin una funcion anonima
-            var paresSinEncapsular = colas.Where((numero) => numero % 2 == 0);
-
+            // Modo ejemplo de otra forma de hacerlo sin una funcion anonima  
             return pares;
         }
     }

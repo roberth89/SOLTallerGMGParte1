@@ -6,12 +6,7 @@ namespace LogicaNegocio
 {
     public static class Cuenta
     {
-        private static decimal _dineroActual = 10000;
-        public static decimal DineroActual
-        {
-            get { return _dineroActual; }
-            set { _dineroActual = value; }
-        }
+        public static decimal DineroActual { get; set; } = 10000;
 
     }
 }

@@ -20,7 +20,7 @@ namespace LogicaNegocio
         /// <param name="mensaje"></param>
         /// <param name="tipoCajero"></param>
         /// <returns></returns>
-        public override decimal RetirarDinero(decimal montoRetiro, ref string mensaje, string tipoCajero)
+        public override decimal RetirarDinero(decimal montoRetiro, ref string mensaje, string tipoCajero = "Cajero Base: ")
         {
             montoRetiro = AsignarTipoCambio(montoRetiro);
             tipoCajero = "Cajero Cordoba";
